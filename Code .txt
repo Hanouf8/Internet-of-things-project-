@@ -1,0 +1,19 @@
+#define led   8
+#define IR_sensor   9
+
+void setup() {
+  // put your setup code here, to run once:
+pinMode(IR_sensor,INPUT);
+pinMode(led,OUTPUT);
+digitalWrite(led,LOW);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+if(digitalRead(IR_sensor)==LOW)
+    {
+      digitalWrite(led,HIGH);
+    }
+ else digitalWrite(led,LOW);   
+}
